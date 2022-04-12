@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div id="container">
 
         <!-- Prima lista -->
         <div>
@@ -80,12 +80,19 @@
 
 <style lang="scss" scoped>
 
-    div {
+    @import '../../style/variabili.scss';
+    @import '../../style/mixin.scss';
+
+    #container {
+        @include center-x(80%);
         padding: 30px 0;
+    }
+
+    div {
         display: flex;
+        margin-right: 50px;
         ul {
             margin-bottom: 20px;
-            margin-right: 50px;
             list-style-type: none;
             text-align: left;
 
@@ -97,13 +104,14 @@
             li {
                 color: grey;
                 text-align: left;
-                font-size: 0.7rem;
+                font-size: $f-small;
                 margin-bottom: 5px;
 
             }
         }
     }
-    div > div > div:nth-child(1){
+    // Il primo div viene incolonnato DC Comics - Shop
+    div > div:nth-child(1){
         flex-direction: column;
     }
 </style>

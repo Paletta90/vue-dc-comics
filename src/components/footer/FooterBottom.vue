@@ -1,11 +1,13 @@
 <template>
 
-    <div class="cont-flex">
-
+    <div id="container">
+        
+        <!-- Parte destra -->
         <span class="button">
             <div>sign-up now!</div>
         </span>
 
+        <!-- Parte sinistra -->
         <div class="block-right">
             <div><span>follow us</span></div>
             <div><img src="../../assets/loghi/footer-facebook.png" alt="Logo Facebook" style="width: 35px; height:35px">
@@ -31,34 +33,36 @@
 </script>
 
 <style lang="scss" scoped>
-
+    @import '../../style/variabili.scss';
     @import '../../style/mixin.scss';
 
-    .cont-flex {
+    #container {
+        @include center-x(80%);
         @include flex(row, space-between, center);
         padding: 20px 0;
-        color: #057be8;
     }
 
     .button {
-        border: 3px solid #057be8;
+        border: 3px solid $blue;
+        cursor: pointer;
 
         div {
             text-transform: uppercase;
             padding: 10px;
+            color: white
         }
     }
 
     .block-right {
-        display: flex;
-        align-items: center;
+        @include flex(row, initial, center);
 
         div {
             margin: 0 10px;
+            cursor: pointer;
 
             span {
-                text-transform: uppercase;
-                font-weight: bold;
+                @include boldUppercase();
+                color: $blue;
             }
         }
 

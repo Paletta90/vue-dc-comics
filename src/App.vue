@@ -5,12 +5,7 @@
     <!-- header -->
     <header>
 
-      <div class="center-80">
-
-        <LogoComp />
         <NavComp />
-
-      </div>
 
     </header>
 
@@ -20,22 +15,14 @@
       <!-- Sezione da riempire -->
       <section class="bg-black">
 
-        <div class="center-80">
-
           <SectionContent />
-
-        </div>
 
       </section>
 
       <!-- Sezione blu  -->
       <section class="bg-blue">
 
-        <div class="center-80 ">
-
           <SectionLink />
-
-        </div>
 
       </section>
 
@@ -47,22 +34,15 @@
       <!-- Background con immagine -->
       <section class="bg-footerImg">
 
-        <div class="center-80">
-
           <FooterLink />
-          <div>
-            <FooterImg />
-          </div>
-          
-
-        </div>
 
       </section>
 
+      <!-- Sezione finale -->
       <section class="bg-footer">
-        <div class="center-80">
+
           <FooterBottom />
-        </div>
+
       </section>
 
     </footer>
@@ -73,23 +53,19 @@
 
 <script>
   // Lista di import
-  import LogoComp from './components/header/LogoComp.vue'
   import NavComp from './components/header/NavComp.vue'
   import SectionContent from './components/main/SectionContent.vue'
   import SectionLink from './components/main/SectionLink.vue'
   import FooterLink from './components/footer/FooterLink.vue'
-  import FooterImg from './components/footer/FooterImg.vue'
   import FooterBottom from './components/footer/FooterBottom.vue'
 
   export default {
     name: 'App',
     components: {
-      LogoComp,
       NavComp,
       SectionContent,
       SectionLink,
       FooterLink,
-      FooterImg,
       FooterBottom
     }
   }
@@ -97,6 +73,7 @@
 
 <style lang="scss">
   @import './style/variabili.scss';
+  @import './style/mixin.scss';
 
   // Reset del body
   * {
@@ -112,21 +89,10 @@
 
     // Header
     header {
-      background-color: $bg-header;
-
-      div {
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+      background-color: white;
     }
 
-    footer section:nth-child(1) > div{
-      position: relative;
-      display: flex;
-    }
-    
+
     // Utility
     .center-80 {
       width: 80%;
@@ -138,14 +104,14 @@
     }
 
     .bg-blue {
-      background-color: #0282f9;
+      background-color: $blue;
     }
 
     .bg-footerImg {
       background-image: url('./assets/img/footer-bg.jpg');
     }
-    
-    .bg-footer{
+
+    .bg-footer {
       background-color: #303030;
     }
   }
