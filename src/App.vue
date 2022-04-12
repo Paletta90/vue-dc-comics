@@ -2,30 +2,60 @@
 
   <div id="app">
 
+    <!-- header -->
     <header>
 
       <div class="center-80">
+
         <LogoComp />
         <NavComp />
+
       </div>
 
     </header>
 
+    <!-- Main -->
     <main>
 
-      <div class="bg-black">
-        <div class="center-80">
-          <SectionContent />
-        </div>
-      </div>
+      <!-- Sezione da riempire -->
+      <section class="bg-black">
 
-      <div class="bg-blue">
-        <div class="center-80 ">
-          <SectionLink />
+        <div class="center-80">
+
+          <SectionContent />
+
         </div>
-      </div>
+
+      </section>
+
+      <!-- Sezione blu  -->
+      <section class="bg-blue">
+
+        <div class="center-80 ">
+
+          <SectionLink />
+
+        </div>
+
+      </section>
 
     </main>
+
+    <!-- Footer -->
+    <footer>
+      
+      <!-- Background con immagine -->
+      <section class="bg-footerImg">
+
+        <div class="center-80">
+
+          <FooterLink />
+
+        </div>
+
+      </section>
+
+    </footer>
 
   </div>
 
@@ -37,6 +67,7 @@
   import NavComp from './components/header/NavComp.vue'
   import SectionContent from './components/main/SectionContent.vue'
   import SectionLink from './components/main/SectionLink.vue'
+  import FooterLink from './components/footer/FooterLink.vue'
 
   export default {
     name: 'App',
@@ -44,7 +75,8 @@
       LogoComp,
       NavComp,
       SectionContent,
-      SectionLink
+      SectionLink,
+      FooterLink
     }
   }
 </script>
@@ -86,8 +118,13 @@
     .bg-black {
       background-color: black;
     }
-    .bg-blue{
+
+    .bg-blue {
       background-color: #0282f9;
+    }
+
+    .bg-footerImg {
+      background-image: url('./assets/img/footer-bg.jpg');
     }
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <ul>
         <li v-for="(elem, index) in arrayObj" :key="index">
-            <img :src="`../../assets/loghi/${elem.img}`" alt="">
+            <img :src="elem.img" alt="">
             {{elem.name}}
         </li>
     </ul>
@@ -16,23 +16,23 @@
                 arrayObj:[
                     {
                         name:'digital comics',
-                        img: 'buy-comics-digital-comics.png',
+                        img: require('../../assets/loghi/buy-comics-digital-comics.png'),
                     },
                     {
                         name:'dc merchandise',
-                        img: 'buy-comics-merchandise.png',
+                        img: require('../../assets/loghi/buy-comics-merchandise.png'),
                     },
                     {
                         name:'subscription',
-                        img: 'buy-comics-subscriptions.png',
+                        img: require('../../assets/loghi/buy-comics-subscriptions.png'),
                     },
                     {
                         name:'comic shop locator',
-                        img: 'buy-comics-shop-locator.png',
+                        img: require('../../assets/loghi/buy-comics-shop-locator.png'),
                     },
                     {
                         name:'dc power visa',
-                        img: 'buy-dc-power-visa.svg',
+                        img: require('../../assets/loghi/buy-dc-power-visa.svg'),
                     }
                 ]
             }
