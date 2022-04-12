@@ -1,6 +1,9 @@
 <template>
     <ul>
-        <li v-for="(elem, index) in arrayObj" :key="index">{{elem.name}}</li>
+        <li v-for="(elem, index) in arrayObj" :key="index">
+            <img :src="`../../assets/loghi/${elem.img}`" alt="">
+            {{elem.name}}
+        </li>
     </ul>
 </template>
 
@@ -13,23 +16,23 @@
                 arrayObj:[
                     {
                         name:'digital comics',
-                        img: '',
+                        img: 'buy-comics-digital-comics.png',
                     },
                     {
                         name:'dc merchandise',
-                        img: '',
+                        img: 'buy-comics-merchandise.png',
                     },
                     {
                         name:'subscription',
-                        img: '',
+                        img: 'buy-comics-subscriptions.png',
                     },
                     {
                         name:'comic shop locator',
-                        img: '',
+                        img: 'buy-comics-shop-locator.png',
                     },
                     {
                         name:'dc power visa',
-                        img: '',
+                        img: 'buy-dc-power-visa.svg',
                     }
                 ]
             }
@@ -43,13 +46,20 @@
     ul{
         // Lista in flex e style-type:none
         @include listHorizontal();
+        padding: 30px 0;
 
         li{
             margin: 0 10px;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: white;
+            display: flex;
+            align-items: center;
 
+            img{
+                width: 50px;
+                margin: 0 10px;
+            }
         }
     }
 </style>
