@@ -1,0 +1,9 @@
+@mixin listHorizontal() {
+    list-style-type: none;
+    display: flex;
+}
+
+@mixin boldUppercase() {
+    font-weight: bold;
+    text-transform: uppercase;
+}
