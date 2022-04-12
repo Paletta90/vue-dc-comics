@@ -50,9 +50,19 @@
         <div class="center-80">
 
           <FooterLink />
+          <div>
+            <FooterImg />
+          </div>
+          
 
         </div>
 
+      </section>
+
+      <section class="bg-footer">
+        <div class="center-80">
+          <FooterBottom />
+        </div>
       </section>
 
     </footer>
@@ -68,6 +78,8 @@
   import SectionContent from './components/main/SectionContent.vue'
   import SectionLink from './components/main/SectionLink.vue'
   import FooterLink from './components/footer/FooterLink.vue'
+  import FooterImg from './components/footer/FooterImg.vue'
+  import FooterBottom from './components/footer/FooterBottom.vue'
 
   export default {
     name: 'App',
@@ -76,7 +88,9 @@
       NavComp,
       SectionContent,
       SectionLink,
-      FooterLink
+      FooterLink,
+      FooterImg,
+      FooterBottom
     }
   }
 </script>
@@ -95,7 +109,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
 
     // Header
     header {
@@ -109,6 +122,11 @@
       }
     }
 
+    footer section:nth-child(1) > div{
+      position: relative;
+      display: flex;
+    }
+    
     // Utility
     .center-80 {
       width: 80%;
@@ -125,6 +143,10 @@
 
     .bg-footerImg {
       background-image: url('./assets/img/footer-bg.jpg');
+    }
+    
+    .bg-footer{
+      background-color: #303030;
     }
   }
 </style>

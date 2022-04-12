@@ -79,7 +79,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import '../../style/mixin.scss';
 
     div {
         padding: 30px 0;
@@ -98,7 +97,6 @@
             li {
                 color: grey;
                 text-align: left;
-                // Stile bold e uppercase
                 font-size: 0.7rem;
                 margin-bottom: 5px;
 
