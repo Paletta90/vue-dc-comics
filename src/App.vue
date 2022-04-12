@@ -20,7 +20,7 @@
       </div>
 
       <div class="bg-blue">
-        <div class="center-80">
+        <div class="center-80 ">
           <SectionLink />
         </div>
       </div>
