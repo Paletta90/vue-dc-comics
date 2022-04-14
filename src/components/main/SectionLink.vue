@@ -2,8 +2,10 @@
     <div id="container">
         <ul>
             <li v-for="(elem, index) in arrayObj" :key="index">
-                <img :src="elem.img" alt="">
-                {{elem.name}}
+                <a href="#">
+                    <img :src="elem.img" alt="">
+                    {{elem.name}}
+                </a>
             </li>
         </ul>
     </div>
@@ -43,12 +45,10 @@
 </script>
 
 <style lang="scss" scoped>
-
     @import '../../style/variabili.scss';
     @import '../../style/mixin.scss';
 
     #container {
-        @include center-x(80%);
         padding: 30px 0;
     }
 
@@ -58,10 +58,14 @@
 
         li {
             margin: 0 10px;
-            text-transform: uppercase;
-            font-size: $f-medium;
-            color: white;
             @include flex(row, initial, center);
+
+            a {
+                @include flex(row, initial, center);
+                color: white;
+                text-transform: uppercase;
+                font-size: $f-medium;
+            }
 
             img {
                 width: 50px;

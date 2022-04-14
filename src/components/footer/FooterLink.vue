@@ -6,11 +6,15 @@
         <div>
             <ul>
                 <h3>DC Comics</h3>
-                <li v-for="(elem, index) in arrayDCComics" :key="index">{{elem}}</li>
+                <li v-for="(elem, index) in arrayDCComics" :key="index">
+                    <a href="#">{{elem}}</a> 
+                </li>
             </ul>
             <ul>
                 <h3>Shop</h3>
-                <li v-for="(elem, index) in arrayShop" :key="index">{{elem}}</li>
+                <li v-for="(elem, index) in arrayShop" :key="index">
+                    <a href="#">{{elem}}</a>
+                </li>
             </ul>
         </div>
 
@@ -18,7 +22,9 @@
         <div>
             <ul>
                 <h3>DC</h3>
-                <li v-for="(elem, index) in arrayDC" :key="index">{{elem}}</li>
+                <li v-for="(elem, index) in arrayDC" :key="index">
+                    <a href="#">{{elem}}</a>
+                </li> 
             </ul>
         </div>
 
@@ -26,7 +32,9 @@
         <div>
             <ul>
                 <h3>SITES</h3>
-                <li v-for="(elem, index) in arraySites" :key="index">{{elem}}</li>
+                <li v-for="(elem, index) in arraySites" :key="index">
+                    <a href="#">{{elem}}</a>
+                </li> 
             </ul>
         </div>
 
@@ -85,7 +93,6 @@
     @import '../../style/mixin.scss';
 
     #container {
-        @include center-x(80%);
         padding: 30px 0;
         position: relative;
     }
@@ -106,16 +113,24 @@
             li {
                 color: grey;
                 text-align: left;
-                font-size: $f-small;
-                margin-bottom: 5px;
 
+                a{
+                    font-size: $f-small;
+                    color: white;
+                    margin-bottom: 5px;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
             }
+            
         }
     }
     img{
         position: absolute;
         top: -20%;
         left: 50%;
+        width: 500px;
         z-index: 0;
     }
     // Il primo div viene incolonnato DC Comics - Shop

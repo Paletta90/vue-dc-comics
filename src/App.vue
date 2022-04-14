@@ -82,6 +82,7 @@
     box-sizing: border-box;
   }
 
+
   #app {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -108,4 +109,14 @@
       z-index: 1;
     }
   }
+
+  // General
+  a{
+    text-decoration: none;
+  }
+
+  #container{
+    @include center-x(80%);
+  }
+
 </style>

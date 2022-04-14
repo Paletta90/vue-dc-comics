@@ -15,11 +15,11 @@
     @import '../../style/mixin.scss';
 
     #container {
-        @include center-x(80%);
         padding: 50px 0;
     }
 
     h1 {
         color: white;
     }
+    
 </style>

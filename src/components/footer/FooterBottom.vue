@@ -37,7 +37,6 @@
     @import '../../style/mixin.scss';
 
     #container {
-        @include center-x(80%);
         @include flex(row, space-between, center);
         padding: 20px 0;
     }
