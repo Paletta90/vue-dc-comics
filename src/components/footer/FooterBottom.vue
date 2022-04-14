@@ -1,13 +1,13 @@
 <template>
 
     <div id="container">
-        
-        <!-- Parte destra -->
+
+        <!-- Parte sinistra -->
         <span class="button">
             <div>sign-up now!</div>
         </span>
 
-        <!-- Parte sinistra -->
+        <!-- Parte destra -->
         <div class="block-right">
             <div><span>follow us</span></div>
             <div><img src="../../assets/loghi/footer-facebook.png" alt="Logo Facebook" style="width: 35px; height:35px">

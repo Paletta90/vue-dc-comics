@@ -30,6 +30,7 @@
             </ul>
         </div>
 
+        <img src="../../assets/loghi/dc-logo-bg.png" alt="">
     </div>
 
 </template>
@@ -86,6 +87,7 @@
     #container {
         @include center-x(80%);
         padding: 30px 0;
+        position: relative;
     }
 
     div {
@@ -109,6 +111,12 @@
 
             }
         }
+    }
+    img{
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        z-index: 0;
     }
     // Il primo div viene incolonnato DC Comics - Shop
     div > div:nth-child(1){

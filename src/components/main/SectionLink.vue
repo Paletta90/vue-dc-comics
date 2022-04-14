@@ -61,7 +61,7 @@
             text-transform: uppercase;
             font-size: $f-medium;
             color: white;
-            @include flex(row, space-between, center);
+            @include flex(row, initial, center);
 
             img {
                 width: 50px;

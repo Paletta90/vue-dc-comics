@@ -20,7 +20,7 @@
       </section>
 
       <!-- Sezione blu  -->
-      <section class="bg-blue">
+      <section class="bg-blue z-index-1">
 
           <SectionLink />
 
@@ -39,7 +39,7 @@
       </section>
 
       <!-- Sezione finale -->
-      <section class="bg-footer">
+      <section class="bg-footer z-index-1">
 
           <FooterBottom />
 
@@ -87,18 +87,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    // Header
-    header {
-      background-color: white;
-    }
-
-
     // Utility
-    .center-80 {
-      width: 80%;
-      margin: 0 auto;
-    }
-
     .bg-black {
       background-color: black;
     }
@@ -113,6 +102,10 @@
 
     .bg-footer {
       background-color: #303030;
+    }
+    .z-index-1{
+      position: relative;
+      z-index: 1;
     }
   }
 </style>
