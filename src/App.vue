@@ -12,7 +12,7 @@
     <!-- Main -->
     <main>
 
-      <!-- Sezione da riempire -->
+      <!-- Sezione jumbotron e movies -->
       <section class="bg-black">
 
         <SectionContent />
