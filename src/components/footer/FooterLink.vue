@@ -38,7 +38,7 @@
             </ul>
         </div>
 
-        <img src="../../assets/loghi/dc-logo-bg.png" alt="">
+        <div class="bg-logo"></div>
     </div>
 
 </template>
@@ -92,8 +92,6 @@
     @import '../../style/mixin.scss';
 
     #container {
-        padding: 30px 0;
-        position: relative;
         display: flex;
 
         // Il primo div viene incolonnato DC Comics - Shop
@@ -105,7 +103,7 @@
             margin-right: 50px;
 
             ul {
-                margin-bottom: 20px;
+                margin: 20px 0;
                 list-style-type: none;
                 text-align: left;
 
@@ -133,12 +131,13 @@
             }
         }
 
-        img {
-            position: absolute;
-            top: -20%;
-            left: 50%;
-            width: 500px;
-            z-index: 0;
+        .bg-logo{
+            width: 50%;
+            background-image: url('../../assets/loghi/dc-logo-bg.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
+       
     }
 </style>

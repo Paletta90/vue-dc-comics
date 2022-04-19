@@ -21,7 +21,7 @@
       </section>
 
       <!-- Sezione blu  -->
-      <section class="bg-blue z-index-1">
+      <section class="bg-blue">
 
         <SectionLink />
 
@@ -40,7 +40,7 @@
       </section>
 
       <!-- Sezione finale -->
-      <section class="bg-footer z-index-1">
+      <section class="bg-footer">
 
         <FooterBottom />
 

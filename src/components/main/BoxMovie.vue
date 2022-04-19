@@ -8,9 +8,13 @@
 <script>
     export default {
         name: 'BoxMovie',
-        props: ['url',
-            'series'
-        ]
+        // props: ['url',
+        //     'series'
+        // ]
+        props: {
+            url: String,
+            series: String
+        }
     }
 </script>
 
