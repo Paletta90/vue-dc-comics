@@ -15,6 +15,7 @@
       <!-- Sezione jumbotron e movies -->
       <section class="bg-black">
 
+        <SectionJumbotron />
         <SectionContent />
 
       </section>
@@ -54,6 +55,7 @@
 <script>
   // Lista di import
   import NavComp from './components/header/NavComp.vue'
+  import SectionJumbotron from './components/main/SectionJumbotron.vue'
   import SectionContent from './components/main/SectionContent.vue'
   import SectionLink from './components/main/SectionLink.vue'
   import FooterLink from './components/footer/FooterLink.vue'
@@ -63,6 +65,7 @@
     name: 'App',
     components: {
       NavComp,
+      SectionJumbotron,
       SectionContent,
       SectionLink,
       FooterLink,
@@ -87,7 +90,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+ 
   // General
   a {
     text-decoration: none;
