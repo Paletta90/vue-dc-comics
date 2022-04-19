@@ -39,31 +39,31 @@
     #container {
         @include flex(row, space-between, center);
         padding: 20px 0;
-    }
 
-    .button {
-        border: 3px solid $blue;
-        cursor: pointer;
 
-        div {
-            text-transform: uppercase;
-            padding: 10px;
-            color: white
-        }
-    }
-
-    .block-right {
-        @include flex(row, initial, center);
-
-        div {
-            margin: 0 10px;
+        .button {
+            border: 3px solid $blue;
             cursor: pointer;
 
-            span {
-                @include boldUppercase();
-                color: $blue;
+            div {
+                text-transform: uppercase;
+                padding: 10px;
+                color: white
             }
         }
 
+        .block-right {
+            @include flex(row, initial, center);
+
+            div {
+                margin: 0 10px;
+                cursor: pointer;
+
+                span {
+                    @include boldUppercase();
+                    color: $blue;
+                }
+            }
+        }
     }
 </style>

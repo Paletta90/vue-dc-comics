@@ -1,3 +1,8 @@
+@mixin reset(){
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 @mixin listHorizontal() {
     list-style-type: none;
     display: flex;

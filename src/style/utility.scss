@@ -1,0 +1,23 @@
+@import 'variabili.scss';
+
+// Utility
+.bg-black {
+    background-color: black;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.bg-footerImg {
+    background-image: url('./assets/img/footer-bg.jpg');
+}
+
+.bg-footer {
+    background-color: #303030;
+}
+
+.z-index-1 {
+    position: relative;
+    z-index: 1;
+}

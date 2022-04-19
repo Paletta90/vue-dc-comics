@@ -3,7 +3,7 @@
         <ul>
             <li v-for="(elem, index) in arrayObj" :key="index">
                 <a href="#">
-                    <img :src="elem.img" alt="">
+                    <img :src= "require(`../../assets/loghi/${elem.img}`)" alt="">
                     {{elem.name}}
                 </a>
             </li>
@@ -20,23 +20,23 @@
             return {
                 arrayObj: [{
                         name: 'digital comics',
-                        img: require('../../assets/loghi/buy-comics-digital-comics.png'),
+                        img: 'buy-comics-digital-comics.png'
                     },
                     {
                         name: 'dc merchandise',
-                        img: require('../../assets/loghi/buy-comics-merchandise.png'),
+                        img: 'buy-comics-merchandise.png'
                     },
                     {
                         name: 'subscription',
-                        img: require('../../assets/loghi/buy-comics-subscriptions.png'),
+                        img: 'buy-comics-subscriptions.png'
                     },
                     {
                         name: 'comic shop locator',
-                        img: require('../../assets/loghi/buy-comics-shop-locator.png'),
+                        img: 'buy-comics-shop-locator.png'
                     },
                     {
                         name: 'dc power visa',
-                        img: require('../../assets/loghi/buy-dc-power-visa.svg'),
+                        img: 'buy-dc-power-visa.svg'
                     }
                 ]
             }
@@ -50,26 +50,27 @@
 
     #container {
         padding: 30px 0;
-    }
 
-    ul {
-        // Lista in flex e style-type:none
-        @include listHorizontal();
 
-        li {
-            margin: 0 10px;
-            @include flex(row, initial, center);
+        ul {
+            // Lista in flex e style-type:none
+            @include listHorizontal();
 
-            a {
-                @include flex(row, initial, center);
-                color: white;
-                text-transform: uppercase;
-                font-size: $f-medium;
-            }
-
-            img {
-                width: 50px;
+            li {
                 margin: 0 10px;
+                @include flex(row, initial, center);
+
+                a {
+                    @include flex(row, initial, center);
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: $f-medium;
+                }
+
+                img {
+                    width: 50px;
+                    margin: 0 10px;
+                }
             }
         }
     }

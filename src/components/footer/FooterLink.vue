@@ -7,7 +7,7 @@
             <ul>
                 <h3>DC Comics</h3>
                 <li v-for="(elem, index) in arrayDCComics" :key="index">
-                    <a href="#">{{elem}}</a> 
+                    <a href="#">{{elem}}</a>
                 </li>
             </ul>
             <ul>
@@ -24,7 +24,7 @@
                 <h3>DC</h3>
                 <li v-for="(elem, index) in arrayDC" :key="index">
                     <a href="#">{{elem}}</a>
-                </li> 
+                </li>
             </ul>
         </div>
 
@@ -34,7 +34,7 @@
                 <h3>SITES</h3>
                 <li v-for="(elem, index) in arraySites" :key="index">
                     <a href="#">{{elem}}</a>
-                </li> 
+                </li>
             </ul>
         </div>
 
@@ -88,53 +88,57 @@
 </script>
 
 <style lang="scss" scoped>
-
     @import '../../style/variabili.scss';
     @import '../../style/mixin.scss';
 
     #container {
         padding: 30px 0;
         position: relative;
-    }
-
-    div {
         display: flex;
-        margin-right: 50px;
-        ul {
-            margin-bottom: 20px;
-            list-style-type: none;
-            text-align: left;
 
-            h3 {
-                color: white;
-                margin-bottom: 15px;
-            }
+        // Il primo div viene incolonnato DC Comics - Shop
+        div:nth-child(1) {
+            flex-direction: column;
+        }
 
-            li {
-                color: grey;
+        div {
+            margin-right: 50px;
+
+            ul {
+                margin-bottom: 20px;
+                list-style-type: none;
                 text-align: left;
 
-                a{
-                    font-size: $f-small;
+                h3 {
                     color: white;
-                    margin-bottom: 5px;
+                    margin-bottom: 15px;
                 }
-                a:hover{
-                    text-decoration: underline;
+
+                li {
+                    color: grey;
+                    text-align: left;
+
+                    a {
+                        font-size: $f-small;
+                        color: white;
+                        margin-bottom: 5px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
                 }
+
             }
-            
         }
-    }
-    img{
-        position: absolute;
-        top: -20%;
-        left: 50%;
-        width: 500px;
-        z-index: 0;
-    }
-    // Il primo div viene incolonnato DC Comics - Shop
-    div > div:nth-child(1){
-        flex-direction: column;
+
+        img {
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            width: 500px;
+            z-index: 0;
+        }
     }
 </style>

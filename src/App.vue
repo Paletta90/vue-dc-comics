@@ -5,7 +5,7 @@
     <!-- header -->
     <header>
 
-        <NavComp />
+      <NavComp />
 
     </header>
 
@@ -15,14 +15,14 @@
       <!-- Sezione da riempire -->
       <section class="bg-black">
 
-          <SectionContent />
+        <SectionContent />
 
       </section>
 
       <!-- Sezione blu  -->
       <section class="bg-blue z-index-1">
 
-          <SectionLink />
+        <SectionLink />
 
       </section>
 
@@ -34,14 +34,14 @@
       <!-- Background con immagine -->
       <section class="bg-footerImg">
 
-          <FooterLink />
+        <FooterLink />
 
       </section>
 
       <!-- Sezione finale -->
       <section class="bg-footer z-index-1">
 
-          <FooterBottom />
+        <FooterBottom />
 
       </section>
 
@@ -72,14 +72,13 @@
 </script>
 
 <style lang="scss">
+  @import './style/utility.scss';
   @import './style/variabili.scss';
   @import './style/mixin.scss';
 
   // Reset del body
   * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    @include reset();
   }
 
 
@@ -87,36 +86,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    // Utility
-    .bg-black {
-      background-color: black;
-    }
-
-    .bg-blue {
-      background-color: $blue;
-    }
-
-    .bg-footerImg {
-      background-image: url('./assets/img/footer-bg.jpg');
-    }
-
-    .bg-footer {
-      background-color: #303030;
-    }
-    .z-index-1{
-      position: relative;
-      z-index: 1;
-    }
   }
 
   // General
-  a{
+  a {
     text-decoration: none;
   }
 
-  #container{
+  #container {
     @include center-x(80%);
   }
-
 </style>

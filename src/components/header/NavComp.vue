@@ -10,7 +10,9 @@
 
         <ul>
             <li v-for="(elem, index) in navBar" :key="index">
-                <a href="#"><div class="p-yb-30">{{elem}}</div></a> 
+                <a href="#">
+                    <div class="p-yb-30">{{elem}}</div>
+                </a>
                 <div class="bar"></div>
             </li>
         </ul>
@@ -49,30 +51,30 @@
 
     #container {
         @include flex(row, space-between, center);
-    }
 
-    ul {
-        padding-top: 30px;
-        // Lista in flex e style-type:none
-        @include listHorizontal();
+        ul {
+            padding-top: 30px;
+            // Lista in flex e style-type:none
+            @include listHorizontal();
 
-        li {
-            cursor: pointer;
-            margin: 0 10px;
-            @include boldUppercase();
-            @include flex(column, space-between, initial);
+            li {
+                cursor: pointer;
+                margin: 0 10px;
+                @include boldUppercase();
+                @include flex(column, space-between, initial);
 
-            a{
-                font-size: $f-small;
-                color: black;
-            }
-        }
+                a {
+                    font-size: $f-small;
+                    color: black;
+                }
 
-        li:hover {
-            color: $blue;
+                &:hover {
+                    color: $blue;
 
-            .bar {
-                background-color: $blue;
+                    .bar {
+                        background-color: $blue;
+                    }
+                }
             }
         }
     }
